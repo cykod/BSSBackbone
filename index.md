@@ -18,7 +18,7 @@ title: Boston Startup School - JavaScript Frameworks
    * Views: `tagName`, `className`, `render`, `model`
 
 6. [Intro to Routers and Events](intro/routers.html)
-7. [Let's build a CRM](https://github.com/cykod/BSSBackbone)
+7. Today's Project: [build a CRM](https://github.com/cykod/BSSBackbone)
     1. Fork the Repo
     2. Create the default layout in straight HTML
     3. Create a router and a home page
