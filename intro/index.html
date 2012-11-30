@@ -58,18 +58,18 @@ $(function() {
   var search = encodeURIComponent("California");
   // API Docs
   // http://www.discogs.com/developers/resources/database/search-endpoint.html
-  $.getJSON("http://api.discogs.com/database/search?type=release&callback=?&q=" + search,function(response) {
+  $.getJSON('discogs-data.json',function(response) {
 
-     albums = window.albums = new AlbumCollection(response.data.results.slice(0,20));
+     albums = window.albums = new AlbumCollection(response.results.slice(0,20));
 
      $("#container").append(new AlbumCollectionView({ collection: albums }).render().el);
   });
 });
 
-</script> 
+</script>
 
 <script type='handlebars' id='album-template'>
-<img src='{{thumb}}' width='64'/> 
+<img src='{{thumb}}' width='64'/>
 <a href='http://www.discogs.com/{{uri}}'>{{title}}</a>
 {{#if year}} / Released {{year}} {{/if}}
 </script>
